@@ -10,11 +10,7 @@ Typeahead directive for AngularJS
  
 ## Installing
 
-- Download all the files
-
-## Usage
-
-TBD
+- Download all the files in the /lib folder
 
 ## Example
 
@@ -26,10 +22,11 @@ TBD
   <link rel="stylesheet" href="typeahead.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
-  <script src="utilities.js"></script>
-  <script src="typeahead.js"></script>
+  <script src="lib/typeahead.js"></script>
+  <script src="lib/utilities.js"></script>
+  
   <script>
-    angular.module('TypeaheadApp', []);
+    angular.module('TypeaheadApp', ['typeahead']);
     
     function SearchController($scope, $q, $location) {
       this.modes          = {};
