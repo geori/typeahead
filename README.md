@@ -3,6 +3,8 @@ typeahead
 
 Typeahead directive for AngularJS
 
+The code here is based on the wonderful [ngTagsInput](https://github.com/mbenford/ngTagsInput) library by [Michael Benford](https://github.com/mbenford).  I merely uncoupled the mbenford's code and made it work in a generic app.
+
 ## Requirements
 
  - AngularJS 1.2.1+ (v1.2.0 **is not** supported due to [an API change](https://github.com/angular/angular.js/commit/90f870) in Angular)
@@ -80,3 +82,10 @@ Typeahead directive for AngularJS
 </body>
 </html>
 ```
+## Alternatives
+
+1. Angucomplete - https://github.com/darylrowland/angucomplete
+2. ngStrap - http://mgcrea.github.io/angular-strap/
+3. angular-ui - http://angular-ui.github.io/
+
+If you're using Twitter Bootstrap, then I recommend going with ngStrap or AngularUI.  However, we don't use Bootstrap, so I needed a general purpose Typeahead/Autocomplete.
