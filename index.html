@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typeahead App</title>
+  <link rel="stylesheet" href="typeahead.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="utilities.js"></script>
+  <script src="typeahead.js"></script>
+  <script src="search.js"></script>
+  
+</head>
+<body ng-app="TypeaheadApp">
+  <div ng-controller="SearchController as Search">
+  
+    <div>
+      <input type="search" maxlength="100" ng-model="Search.query">
+      <typeahead source="Search.loadResults(Search.query)" action="Search.select(item)"></typeahead>
+    </div>
+
+    <div ng-hide="Search.lastSearch === ''">
+      <h3>Last Search was for '<em>{{Search.lastSearch}}</em>'</h3>
+    </div>
+
+  </div>
+</body>
+</html>
