@@ -1,12 +1,10 @@
-function SearchController($scope, $q, $location) {
+function SearchController($scope, $q) {
   this.modes          = {};
   this.options        = {};
+  this.lastSearch     = "";
 
   this.tags = [ {text:'bacon'},{text:'ham'},{text:'eggs'},{text:'cheese'},{text:'onions'},{text:'chili'},{text:'ketchup'},{text:'catsup'},
                 {text:'herp'},{text:'derp'},{text:'serp'},{text:'perp'},{text:'twerp'} ];
-
-
-  this.lastSearch = "";
 
   this.loadResults = function($query) {
     var deferred = $q.defer();
@@ -23,18 +21,13 @@ function SearchController($scope, $q, $location) {
   };
 
   this.select = function(item) {
-    var deferred = $q.defer();
-
-    console.log("Exexuting Search for ");
-    console.log(item);
-
+    var deferred    = $q.defer();
     this.lastSearch = item.text;
 
     deferred.resolve();
     return deferred.promise;
-  }
+  };
 
-  
 }
 
 angular.module('TypeaheadApp')

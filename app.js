@@ -1,1 +1,1 @@
-angular.module('TypeaheadApp', []);
+angular.module('TypeaheadApp', ['typeahead']);
